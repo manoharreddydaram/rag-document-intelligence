@@ -1,7 +1,7 @@
 # CPU-only torch wheel index (avoids pulling multi-GB CUDA binaries this
 # project doesn't need). Works both locally and on Streamlit Community Cloud.
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.7.1
+torch==2.9.0
 
 fastapi==0.139.0
 uvicorn[standard]==0.51.0
