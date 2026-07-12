@@ -1,0 +1,27 @@
+Deployment Runbook — Production Release Process
+Nimbus Analytics Inc. — Engineering Department
+Runbook Version: 2.1
+
+1. Purpose
+This runbook defines the standard procedure for deploying changes to the production environment described in the System Architecture Overview, and the rollback procedure if a deployment fails.
+
+2. Pre-Deployment Checklist
+- All CI checks (unit tests, integration tests, security scan) must pass on the release branch.
+- Change must be reviewed and approved by at least one senior engineer.
+- Database migrations must be tested against a staging snapshot of production data.
+- Deployment window must avoid the year-end blackout period referenced in company-wide change freezes.
+
+3. Deployment Steps
+1) Merge the release branch and tag a release version. 2) Deploy to the canary environment (5% of production traffic) and monitor error rates and latency for 15 minutes. 3) If canary metrics remain within normal thresholds, proceed to a rolling deployment across the remaining production fleet in 4 batches of 25%, with a 10-minute soak time between batches. 4) Run the automated smoke test suite against production after full rollout.
+
+4. Rollback Procedure
+If error rates exceed 1% above baseline or p99 latency exceeds 2x baseline during any deployment stage, the on-call engineer initiates an automatic rollback to the previous stable release tag. Rollback typically completes within 8 minutes. Any rollback must be followed by an incident writeup per the Incident Response Policy if customer impact exceeded 5 minutes.
+
+5. Database Migrations
+Schema migrations follow an expand-contract pattern: new columns/tables are added in a backward-compatible way first, deployed, backfilled, and only removed in a subsequent release after all services are confirmed migrated. See the Database Schema Migration Guide for detailed migration authoring standards.
+
+6. Disaster Recovery Failover
+Full regional failover to the secondary AWS region (see System Architecture Overview) is a separate, higher-severity procedure requiring VP Engineering sign-off, tested quarterly during scheduled game-day exercises rather than executed ad hoc.
+
+7. Post-Deployment
+Release notes are published internally, and customer-facing changes are logged in the API Documentation changelog when applicable. On-call engineer monitors dashboards for 2 hours post-deployment before handing off.

@@ -1,0 +1,25 @@
+SOC 2 Type II Compliance Report — Executive Summary
+Nimbus Analytics Inc. — Legal & Compliance Department
+Audit Period: January 1, 2025 – December 31, 2025
+Auditor: Ferris & Cole Assurance LLP
+
+1. Scope of Examination
+This report summarizes the results of a SOC 2 Type II examination covering the Security, Availability, and Confidentiality Trust Services Criteria for Nimbus Analytics' core analytics platform, over the 12-month audit period.
+
+2. Overall Opinion
+The auditor issued an unqualified (clean) opinion, concluding that controls were suitably designed and operated effectively throughout the audit period to meet the applicable trust services criteria, with two exceptions noted in Section 4.
+
+3. Security Controls Tested
+Controls tested included: access provisioning and de-provisioning tied to the Access Control Policy, multi-factor authentication enforcement, encryption of data at rest and in transit, quarterly access reviews, and the incident response process defined in the Incident Response Policy. All 42 sampled access changes were correctly approved and logged.
+
+4. Exceptions Noted
+Two minor exceptions were identified: (1) in March 2025, a terminated employee's VPN access was not revoked within the required 24-hour window (revoked after 36 hours) due to a manual process gap; a corrective action introducing automated de-provisioning was implemented in June 2025. (2) Security awareness training completion for new hires in Q1 2025 fell to 92% against a 100% target within the first 5 business days; this was remediated by tying training completion to system access provisioning, as reflected in the current Onboarding Guide.
+
+5. Availability
+The platform maintained 99.95% uptime against a 99.9% SLA commitment during the audit period, with two incidents exceeding the internal severity-2 threshold, both resolved within the runbook-defined recovery time objectives.
+
+6. Confidentiality
+Data classification tiers defined in the Data Classification Policy were consistently applied across sampled systems. No unauthorized disclosures of Tier 1 data were identified during the audit period.
+
+7. Next Audit
+The next SOC 2 Type II audit period begins January 1, 2026, with fieldwork expected in Q1 2027. Customers may request a copy of the full report under NDA via trust@nimbusanalytics.example.

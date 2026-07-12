@@ -1,0 +1,24 @@
+Database Schema Migration Guide
+Nimbus Analytics Inc. — Engineering Department
+Standard: Internal Engineering Handbook, Section 7
+
+1. Purpose
+This guide defines standards for authoring safe schema migrations against the ClickHouse and PostgreSQL data stores described in the System Architecture Overview, to avoid downtime during the deployment process defined in the Deployment Runbook.
+
+2. Expand-Contract Pattern
+All schema changes must follow expand-contract: (1) Expand — add new nullable columns, tables, or indexes without removing or renaming existing structures. (2) Migrate — deploy application code that writes to both old and new structures, then backfill historical data in batches during off-peak hours. (3) Contract — after confirming all consumers use the new structure for at least one full release cycle, remove the deprecated structure in a separate migration.
+
+3. Backfill Guidelines
+Backfills against production tables must run in batches of no more than 10,000 rows with a throttle delay between batches to avoid replication lag or lock contention. Backfills touching Tier 1 sensitive data (per the Data Classification Policy) require a Security team review before execution.
+
+4. Migration Review Requirements
+Every migration PR requires: a rollback script tested in staging, an estimated execution time based on staging row counts, and sign-off from a database-focused senior engineer. Migrations expected to take longer than 5 minutes on production-scale data must be scheduled during the designated low-traffic window (2:00-4:00 AM UTC).
+
+5. Testing
+Migrations are first applied to a nightly-refreshed staging snapshot of production data. Any migration that fails on staging blocks merge. Post-migration, automated schema validation checks run to confirm expected column types, indexes, and constraints match the migration spec.
+
+6. Emergency Migrations
+Emergency schema changes to address a production incident may bypass the standard review cycle with VP Engineering approval, but must still include a tested rollback script and are followed by a retrospective per the Incident Response Policy.
+
+7. Ownership
+The Data Platform team owns migration tooling and is available in #data-platform-support for review escalations.

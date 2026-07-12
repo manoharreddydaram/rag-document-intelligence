@@ -1,0 +1,26 @@
+Vendor Contract Summary — Key Subprocessors
+Nimbus Analytics Inc. — Legal & Compliance Department
+Quarterly Review: Q2 2026
+
+1. Purpose
+This summary tracks active vendor contracts for subprocessors that handle Nimbus Analytics customer or employee data, as referenced in the GDPR Compliance Overview and required for SOC 2 audits.
+
+2. Cloud Infrastructure — CloudPeak Systems
+Contract term: 3 years, renewed January 2026. CloudPeak hosts all production databases and application servers. A signed Data Processing Agreement (DPA) with Standard Contractual Clauses is on file. Annual SOC 2 Type II report received and reviewed by Security in February 2026.
+
+3. Payment Processing — SettleFlow Inc.
+Contract term: 2 years, expires November 2027. SettleFlow processes all customer billing transactions and is PCI-DSS Level 1 certified. Nimbus Analytics does not store raw card numbers; tokenization is handled entirely by SettleFlow.
+
+4. Customer Support Platform — HelpDeskly
+Contract term: 1 year, auto-renews annually. HelpDeskly hosts the customer support ticketing system referenced throughout the Customer Support category of this document set. A DPA is on file; data residency is confirmed as US-East per contractual requirement.
+
+5. Email and Communications — MailRelay Corp
+Contract term: 1 year, expires August 2026 — up for renewal negotiation. MailRelay handles transactional and marketing email delivery. Marketing consent records referenced in the Data Retention Policy are partially stored in MailRelay's platform and included in DSR fulfillment scope.
+
+6. Background Check Provider — VerifyHR
+Contract term: month-to-month. Used by HR during the onboarding process described in the New Hire Onboarding Guide. Data shared is limited to candidate name, SSN (encrypted in transit), and consent form.
+
+7. Renewal and Risk Review Process
+All vendor contracts handling personal data undergo an annual security and privacy risk review led by Legal and Security jointly. Vendors scoring below the acceptable risk threshold on the vendor security questionnaire are flagged for remediation or contract non-renewal. The next full review cycle is scheduled for Q3 2026.
+
+Contact: vendor-legal@nimbusanalytics.example

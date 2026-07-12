@@ -1,0 +1,35 @@
+From: product@wavelength.example
+To: support@nimbusanalytics.example
+Subject: [Ticket #4524] Feature request: per-project rate limit configuration
+Date: Fri, 15 May 2026 10:03:12 -0500
+X-Ticket-Priority: Low
+X-Ticket-Status: Open
+
+Hi team,
+
+We're on the Enterprise tier and hitting our 10,000 requests/minute limit during traffic spikes on one high-volume project, while our other three projects on the same account are well under their limits. Would it be possible to configure rate limits per-project rather than account-wide, or reallocate unused headroom from our low-traffic projects to the busy one?
+
+Project IDs: proj_30021 (high traffic), proj_30022, proj_30023, proj_30024
+
+Thanks,
+Dana Chen
+Wavelength Product Team
+
+---
+
+From: support@nimbusanalytics.example
+To: product@wavelength.example
+Subject: RE: [Ticket #4524] Feature request: per-project rate limit configuration
+Date: Fri, 15 May 2026 15:40:27 -0500
+
+Hi Dana,
+
+Thanks for the detailed request. Currently, per the API Documentation, rate limits are enforced per-project token rather than account-wide, so proj_30021's limit isn't actually shared with your other three projects — each already has its own independent 10,000 req/min ceiling on Enterprise tier. If proj_30021 alone is exceeding 10,000 req/min during spikes, that's a per-project limit being hit, not cross-project contention.
+
+I've logged this as a product feature request (internal ref FR-2216) for configurable per-project limits above the standard Enterprise ceiling, since that's a different ask — effectively a burst allowance for a single high-volume project. I don't have a committed timeline for this yet; I'll follow up when it's scoped by Product.
+
+In the meantime, one workaround: batch your event submissions using the batch-import endpoint for non-real-time data on proj_30021 to reduce request count within the existing limit, if applicable to your use case.
+
+Best,
+Marcus
+Nimbus Analytics Support

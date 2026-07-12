@@ -1,0 +1,41 @@
+From: finance@retailgrid.example
+To: support@nimbusanalytics.example
+Subject: [Ticket #4522] May invoice shows incorrect event count
+Date: Wed, 6 May 2026 14:22:03 -0500
+X-Ticket-Priority: Medium
+X-Ticket-Status: Resolved
+
+Hello,
+
+Our May invoice (Invoice #INV-20260501-RG) charges us for 14.2M ingested events on the Enterprise tier, but our internal tracking shows we only sent about 9.8M events for that billing period. Can you confirm how usage is calculated? Our project ID is proj_55019.
+
+Regards,
+Finance Team, RetailGrid
+
+---
+
+From: support@nimbusanalytics.example
+To: finance@retailgrid.example
+Subject: RE: [Ticket #4522] May invoice shows incorrect event count
+Date: Wed, 6 May 2026 16:05:51 -0500
+
+Hi RetailGrid Finance Team,
+
+Thanks for flagging this — I pulled the raw ingestion logs for proj_55019 for the May billing cycle. The discrepancy is because your billing count includes events submitted through the /v3/events/batch-import endpoint used during your March-to-May historical data migration, which our billing system counted as May-cycle usage rather than pro-rating them across the original event dates. This is a known limitation with the batch-import endpoint referenced in our API Documentation — it doesn't currently carry historical billing timestamps.
+
+I've issued a billing correction crediting your account $2,340.00, which will appear on your June invoice. Going forward, large historical backfills should be flagged to your Customer Success Manager in advance so we can apply a migration billing exclusion before the import runs.
+
+Apologies for the confusion, and thanks for catching this.
+
+Best,
+Marcus
+Nimbus Analytics Support — Billing Team
+
+---
+
+From: finance@retailgrid.example
+To: support@nimbusanalytics.example
+Subject: RE: [Ticket #4522] May invoice shows incorrect event count
+Date: Thu, 7 May 2026 08:30:15 -0500
+
+That explains it, thank you for the quick correction. We'll flag future migrations ahead of time. Closing this ticket.

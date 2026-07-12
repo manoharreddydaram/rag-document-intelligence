@@ -1,0 +1,29 @@
+Data Retention Policy
+Nimbus Analytics Inc. — Legal & Compliance Department
+Effective Date: March 1, 2026
+
+1. Purpose
+This policy defines how long Nimbus Analytics retains various categories of data, ensuring compliance with GDPR, SOC 2, and contractual obligations while minimizing unnecessary data storage risk.
+
+2. Retention Schedule
+- Customer account and billing records: retained for 7 years after account closure, per financial audit requirements described in the Expense Audit Report process.
+- Customer usage/analytics data: retained for 24 months on a rolling basis, then automatically anonymized.
+- Employee HR records: retained for 7 years after termination, per employment law requirements.
+- Security logs and access logs: retained for 13 months, per the Incident Response Policy and SOC 2 Compliance Report requirements.
+- Customer support tickets: retained for 3 years after ticket closure for quality and training purposes.
+- Marketing/consent records: retained for 5 years after last customer interaction or until consent is withdrawn, whichever is sooner.
+
+3. Legal Holds
+When Legal issues a litigation hold notice, standard retention and deletion schedules are suspended for the affected data until the hold is formally lifted. Engineering must implement hold flags in the relevant data stores within 5 business days of notice.
+
+4. Deletion Procedures
+Automated deletion jobs run monthly against production databases and backups for data that has exceeded its retention period, in coordination with the Data Classification Policy's sensitivity tiers. Deletion of Tier 1 (highly sensitive) data requires a two-person approval workflow logged in the Change Management system.
+
+5. Backups
+Backups are retained for a maximum of 90 days on a rolling basis, independent of the primary data retention schedule, to support disaster recovery per the Deployment Runbook.
+
+6. Exceptions
+Data subject to an active legal hold, ongoing investigation, or explicit customer contractual retention terms is exempt from standard deletion schedules until the exception is resolved.
+
+7. Review Cadence
+This policy is reviewed annually by Legal and Security, or sooner if required by regulatory changes. Questions should be directed to legal-compliance@nimbusanalytics.example.

@@ -1,0 +1,24 @@
+New Hire Onboarding Guide
+Nimbus Analytics Inc. — Human Resources Department
+Last Updated: March 2026
+
+1. Before Day One
+Hiring managers must submit an equipment request via the IT Service Desk at least 5 business days before the employee's start date. HR will send the new hire a welcome packet including benefits enrollment links, a copy of the Employee Handbook, and instructions for completing I-9 verification through the E-Verify portal.
+
+2. Day One Checklist
+New employees report to the front desk at 9:00 AM for badge issuance. IT will provision a company laptop, email account, and Okta single sign-on credentials. New hires must complete mandatory compliance training modules (Security Awareness, Code of Conduct, and Anti-Harassment) within the first 5 business days, tracked automatically in the Learning Management System.
+
+3. First Week
+The assigned onboarding buddy schedules introductory meetings with core team members. New hires should review the Data Classification Policy and Access Control Policy published by the Security team, as system access is provisioned on a least-privilege basis tied to role and will expand as required approvals are completed.
+
+4. Benefits Enrollment
+Employees have 30 days from their start date to enroll in health, dental, and vision insurance, and to designate 401(k) contribution elections. Failure to enroll within this window results in default enrollment in the base PPO plan with no 401(k) contribution until the next open enrollment period.
+
+5. 30-60-90 Day Check-ins
+Managers conduct structured check-ins at 30, 60, and 90 days to review role expectations, provide feedback, and address any onboarding gaps. The 90-day check-in also marks the end of the probationary period, after which employees become eligible to apply for remote work arrangements under the Remote Work Policy.
+
+6. Remote and Hybrid New Hires
+Remote new hires receive equipment shipped to their home address prior to the start date and complete a virtual Day One orientation via video call. IT support during the first week is prioritized for remote hires to resolve VPN and hardware setup issues quickly.
+
+7. Contact
+Onboarding questions should go to onboarding@nimbusanalytics.example.

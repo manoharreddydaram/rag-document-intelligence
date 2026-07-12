@@ -1,0 +1,48 @@
+From: jmartinez@customerco.example
+To: support@nimbusanalytics.example
+Subject: [Ticket #4521] Unable to log in after password reset
+Date: Mon, 4 May 2026 09:14:22 -0500
+X-Ticket-Priority: High
+X-Ticket-Status: Resolved
+
+Hi Support Team,
+
+I reset my password yesterday through the "Forgot Password" flow, but I'm still getting an "Invalid credentials" error when I try to log in to the dashboard at app.nimbusanalytics.example. I've tried clearing my browser cache and using an incognito window with no luck. Our whole analytics team is blocked from viewing our project dashboard.
+
+Account email: jmartinez@customerco.example
+Project ID: proj_88213
+
+Thanks,
+Jordan Martinez
+
+---
+
+From: support@nimbusanalytics.example
+To: jmartinez@customerco.example
+Subject: RE: [Ticket #4521] Unable to log in after password reset
+Date: Mon, 4 May 2026 10:02:47 -0500
+
+Hi Jordan,
+
+Thanks for reaching out. I checked your account and found that the password reset email had triggered a security hold because your account has multi-factor authentication (MFA) enabled via an authenticator app, and the reset flow requires re-confirming the MFA device. This is a known edge case when the MFA device was replaced recently.
+
+I've manually cleared the security hold and sent a fresh password reset link that will skip the MFA re-confirmation step this one time. Please reset your password again using the new link, and then re-register your authenticator app under Account Settings > Security to avoid this happening again.
+
+This aligns with the authentication requirements described in our Access Control Policy for customer-facing accounts with MFA enabled.
+
+Let us know if you're still blocked after resetting.
+
+Best,
+Priya
+Nimbus Analytics Support
+
+---
+
+From: jmartinez@customerco.example
+To: support@nimbusanalytics.example
+Subject: RE: [Ticket #4521] Unable to log in after password reset
+Date: Mon, 4 May 2026 10:41:09 -0500
+
+That worked, thank you! Re-registered my authenticator app too. Closing this out on our end.
+
+Jordan

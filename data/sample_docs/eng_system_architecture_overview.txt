@@ -1,0 +1,24 @@
+System Architecture Overview
+Nimbus Analytics Inc. — Engineering Department
+Last Updated: May 2026
+
+1. High-Level Architecture
+The Nimbus Analytics platform follows a microservices architecture deployed on CloudPeak Systems infrastructure (see Vendor Contract Summary). Core services include the Ingestion Service, Query Service, Notification Service, and the Billing Service, communicating via an internal event bus (Kafka).
+
+2. Ingestion Path
+Customer events arrive via the REST API described in the API Documentation, are validated, written to a Kafka topic, and consumed by a stream processor that performs schema inference and writes to the primary analytics data store (ClickHouse cluster, 12 nodes across 3 availability zones).
+
+3. Query Path
+Customer-facing dashboards issue queries through the Query Service, which translates dashboard requests into ClickHouse SQL, applies row-level security based on the requesting project's access scope, and caches frequent aggregate queries in Redis with a 5-minute TTL.
+
+4. Data Storage Tiers
+Hot data (last 30 days) is stored on NVMe-backed ClickHouse nodes for low-latency queries. Warm data (31-365 days) is stored on standard SSD-backed nodes. Cold data (over 365 days) is compressed and moved to S3-compatible object storage, queryable via a slower federated query path, consistent with retention windows in the Data Retention Policy.
+
+5. Security Boundaries
+All inter-service traffic is encrypted via mTLS. Services authenticate to each other using short-lived SPIFFE identities issued by the internal certificate authority. External API traffic terminates at an API gateway enforcing the rate limits and authentication described in the API Documentation.
+
+6. Disaster Recovery
+The platform maintains a warm standby in a secondary AWS region with asynchronous replication (RPO of 5 minutes). Failover procedures are documented in the Deployment Runbook and tested quarterly via game-day exercises.
+
+7. Observability
+All services emit structured logs to a centralized logging pipeline (retained per the Data Retention Policy's 13-month security log window) and metrics to a Prometheus/Grafana stack. Alerting thresholds trigger PagerDuty escalation for the on-call engineer.

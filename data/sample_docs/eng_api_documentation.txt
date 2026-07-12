@@ -1,0 +1,27 @@
+Internal API Documentation — Analytics Ingestion Service
+Nimbus Analytics Inc. — Engineering Department
+Version: 3.4.0
+
+1. Overview
+The Analytics Ingestion Service exposes a REST API for customers to push event data into the Nimbus Analytics platform. This document covers authentication, core endpoints, rate limits, and error handling.
+
+2. Authentication
+All requests require a Bearer token issued via the Developer Portal. Tokens are scoped per-project and expire after 90 days. Rotate tokens proactively; expired tokens return HTTP 401 with error code AUTH_TOKEN_EXPIRED. Tokens must never be embedded in client-side code, consistent with the Data Classification Policy's handling rules for credentials.
+
+3. Core Endpoints
+POST /v3/events — Ingest a single event or batch of up to 500 events. Request body must include event_name, timestamp (ISO 8601), and a properties object. Returns HTTP 202 on successful queuing.
+GET /v3/events/{event_id} — Retrieve ingestion status for a previously submitted event.
+POST /v3/events/batch-import — Bulk import via signed S3 URL for datasets exceeding 500 events; used primarily during customer migrations.
+GET /v3/projects/{project_id}/schema — Retrieve the current inferred schema for a project's event properties.
+
+4. Rate Limits
+Standard tier: 1,000 requests/minute per project token. Enterprise tier: 10,000 requests/minute. Requests exceeding the limit receive HTTP 429 with a Retry-After header. Sustained rate-limit violations trigger an automated alert to the customer's assigned Customer Success Manager.
+
+5. Error Handling
+The API returns structured error responses with an `error_code` and `message` field. Common codes: VALIDATION_ERROR (malformed payload), AUTH_TOKEN_EXPIRED, PROJECT_NOT_FOUND, and RATE_LIMIT_EXCEEDED. Clients should implement exponential backoff for 429 and 5xx responses.
+
+6. Data Retention and Deletion via API
+Customers may issue a DELETE /v3/events/{event_id} request to remove a specific event, primarily used to fulfill GDPR erasure requests referenced in the GDPR Compliance Overview. Bulk deletion requests should be routed through Support rather than the API to ensure proper audit logging.
+
+7. Changelog Highlights
+v3.4.0 (this version) added the batch-import endpoint and increased the standard tier batch size from 200 to 500 events. v3.3.0 introduced schema inference. Full changelog available in the Developer Portal.

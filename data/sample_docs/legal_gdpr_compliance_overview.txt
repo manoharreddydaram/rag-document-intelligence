@@ -1,0 +1,25 @@
+GDPR Compliance Overview
+Nimbus Analytics Inc. — Legal & Compliance Department
+Document Owner: General Counsel
+Last Reviewed: April 2026
+
+1. Scope
+This document summarizes Nimbus Analytics' compliance posture under the EU General Data Protection Regulation (GDPR) for personal data of EU-based customers and employees processed by our platform. It applies to all business units handling EU personal data, including the Customer Support and Engineering teams.
+
+2. Legal Basis for Processing
+Nimbus Analytics processes personal data under the following legal bases: (a) contractual necessity, for data required to deliver the analytics platform to customers; (b) legitimate interest, for product usage analytics and fraud prevention; and (c) consent, for marketing communications, which customers may withdraw at any time via the preference center.
+
+3. Data Subject Rights
+EU data subjects have the right to access, rectify, erase, restrict processing of, and port their personal data. Requests are submitted through privacy@nimbusanalytics.example and must be fulfilled within 30 calendar days per Article 12. The Legal team coordinates with Engineering to execute erasure requests against production databases and backups, tracked in the Data Subject Request (DSR) log.
+
+4. Data Processing Agreements
+All third-party subprocessors that handle EU personal data on our behalf (cloud hosting, payment processing, customer support tooling) must execute a Data Processing Agreement (DPA) incorporating Standard Contractual Clauses (SCCs) prior to onboarding. The current subprocessor list is maintained in the Vendor Contract Summary and reviewed quarterly by Legal.
+
+5. Breach Notification
+In the event of a personal data breach affecting EU data subjects, Nimbus Analytics must notify the relevant supervisory authority within 72 hours of becoming aware of the breach, per the Incident Response Policy maintained by the Security team. Affected individuals must be notified without undue delay if the breach poses a high risk to their rights and freedoms.
+
+6. Data Retention
+Personal data is retained only as long as necessary for the purposes for which it was collected, per the Data Retention Policy. EU customer data is deleted or anonymized no later than 24 months after contract termination, unless a longer retention period is required by law.
+
+7. Data Protection Officer
+Nimbus Analytics has appointed a Data Protection Officer (DPO) responsible for monitoring GDPR compliance. The DPO can be reached at dpo@nimbusanalytics.example.

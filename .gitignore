@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+chroma_store/
+.streamlit/secrets.toml
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+.eval_cache.json

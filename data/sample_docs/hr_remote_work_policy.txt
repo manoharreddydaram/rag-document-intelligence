@@ -1,0 +1,27 @@
+Remote Work Policy
+Nimbus Analytics Inc. — Human Resources Department
+Effective Date: January 15, 2026
+
+1. Purpose
+This policy establishes guidelines for employees who work remotely, either on a full-time or hybrid basis. It is designed to ensure consistent expectations around availability, productivity, equipment, and data security while supporting employee flexibility.
+
+2. Eligibility
+Full-time employees who have completed their 90-day probationary period are eligible to apply for remote work arrangements. Eligibility is subject to manager approval and role suitability. Roles requiring on-site equipment access (e.g., hardware lab technicians) are generally not eligible for full remote status but may qualify for hybrid arrangements.
+
+3. Work Hours and Availability
+Remote employees are expected to be available during core collaboration hours of 10:00 AM to 3:00 PM in their assigned time zone. Outside of core hours, employees may set flexible schedules provided they meet weekly output expectations agreed upon with their manager. All remote employees must maintain an accurate status on the company messaging platform (Slack) during working hours.
+
+4. Equipment and Reimbursement
+The company provides a one-time home office stipend of $750 for approved remote employees to purchase a desk, chair, or monitor. Employees must submit receipts through the Expense Portal within 60 days of the equipment purchase for reimbursement. Company-issued laptops remain company property and must be returned upon termination of employment.
+
+5. Data Security Requirements
+Remote employees must connect to internal systems exclusively through the company VPN. Use of public Wi-Fi without VPN protection is prohibited for accessing confidential systems. All remote workstations must have full-disk encryption enabled and automatic screen lock after 5 minutes of inactivity, consistent with the Data Classification Policy and Access Control Policy maintained by the Security team.
+
+6. Performance Expectations
+Remote work is a privilege contingent on sustained performance. Managers will conduct quarterly check-ins to assess productivity, and any performance decline attributable to remote arrangements may result in a required return to in-office work. Employees on a Performance Improvement Plan (PIP) are not eligible for new remote work requests during the PIP period.
+
+7. Termination of Remote Arrangement
+The company reserves the right to revoke remote work privileges at any time with 30 days' notice, except in cases of policy violation, where revocation may be immediate. Employees may also request to return to in-office work at any time by notifying their manager and HR Business Partner.
+
+8. Contact
+Questions about this policy should be directed to hr-policies@nimbusanalytics.example or your assigned HR Business Partner.

@@ -1,0 +1,28 @@
+Paid Time Off (PTO) Policy
+Nimbus Analytics Inc. — Human Resources Department
+Effective Date: February 1, 2026
+
+1. Overview
+Nimbus Analytics provides a flexible PTO program covering vacation, personal days, and short-term illness. This policy applies to all full-time employees; part-time employees accrue PTO on a pro-rated basis.
+
+2. Accrual Rates
+Employees accrue PTO based on tenure:
+- Years 0-2: 15 days per year (1.25 days/month)
+- Years 3-5: 20 days per year (1.67 days/month)
+- Years 6+: 25 days per year (2.08 days/month)
+PTO accrues monthly and is credited on the last business day of each month. Unused PTO carries over up to a maximum of 10 days into the following calendar year; any balance above 10 days is forfeited on December 31 unless local law requires otherwise.
+
+3. Requesting Time Off
+PTO requests must be submitted through the Workday portal at least 5 business days in advance for single-day absences and 30 days in advance for absences of 5 or more consecutive days. Manager approval is required. Requests during the last two weeks of December are subject to blackout restrictions due to year-end close.
+
+4. Sick Leave
+In addition to standard PTO, employees receive 8 dedicated sick days per year that do not roll over. Sick days may be used for personal illness, medical appointments, or to care for an immediate family member. No documentation is required for absences of 2 days or fewer; a doctor's note is required for absences of 3 or more consecutive days.
+
+5. Holidays
+Nimbus Analytics observes 11 paid company holidays annually, published each January in the HR portal. Employees required to work on a company holiday due to business needs receive a floating holiday to use within the same calendar year.
+
+6. Payout Upon Termination
+Unused, accrued PTO (up to the carryover cap) is paid out at the employee's final base salary rate upon voluntary or involuntary termination, in accordance with state law. Sick leave is not paid out upon termination.
+
+7. Contact
+Direct questions about PTO balances or accrual to hr-payroll@nimbusanalytics.example.

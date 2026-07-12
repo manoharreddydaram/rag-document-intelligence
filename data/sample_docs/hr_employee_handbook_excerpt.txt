@@ -1,0 +1,21 @@
+Employee Handbook — Excerpt: Code of Conduct and Workplace Standards
+Nimbus Analytics Inc. — Human Resources Department
+Revision 4.2, January 2026
+
+1. Purpose
+This excerpt covers the Code of Conduct section of the full Employee Handbook. All employees are required to acknowledge receipt of the full handbook electronically within 5 days of their start date.
+
+2. Standards of Conduct
+Employees are expected to act with integrity, treat colleagues and clients with respect, and comply with all applicable laws and company policies, including the Security Awareness Policy and Anti-Harassment Policy. Conflicts of interest, including outside employment that competes with Nimbus Analytics' business, must be disclosed to a manager and HR in writing.
+
+3. Anti-Harassment and Discrimination
+Nimbus Analytics maintains a zero-tolerance policy for harassment or discrimination based on race, gender, age, religion, disability, sexual orientation, or any other protected characteristic. Employees who experience or witness harassment should report it immediately to HR via the confidential ethics hotline at ethics@nimbusanalytics.example or the anonymous reporting portal. Retaliation against anyone who reports in good faith is strictly prohibited and grounds for termination.
+
+4. Confidentiality
+Employees may have access to confidential business information, trade secrets, and customer data in the course of their work. This information must not be disclosed outside the company, consistent with the Data Classification Policy. Violations may result in disciplinary action up to and including termination, and may expose the employee to legal liability.
+
+5. Disciplinary Process
+Performance or conduct issues are typically addressed through a progressive discipline process: verbal warning, written warning, Performance Improvement Plan (PIP), and termination. Serious violations, such as harassment, theft, or data security breaches, may result in immediate termination without progressing through earlier steps.
+
+6. Acknowledgment
+By continuing employment, employees acknowledge they have read and agree to comply with the Code of Conduct. Questions should be directed to your HR Business Partner or hr-policies@nimbusanalytics.example.
