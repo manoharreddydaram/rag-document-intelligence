@@ -1,5 +1,7 @@
 """Streamlit demo UI for the Enterprise Document Intelligence RAG pipeline."""
 import os
+import shutil
+import tempfile
 
 import streamlit as st
 
@@ -12,8 +14,9 @@ try:
 except st.errors.StreamlitSecretNotFoundError:
     pass
 
+from src import config
 from src.generate import answer_question
-from src.ingest import ingest_directory, list_documents
+from src.ingest import ingest_directory, ingest_file, list_documents
 from src.retrieval import get_index
 
 st.set_page_config(page_title="Enterprise Document Intelligence", page_icon="📄", layout="wide")
@@ -56,6 +59,38 @@ with st.sidebar:
                 ingest_directory()
                 get_index().refresh()
             st.rerun()
+
+    st.divider()
+    st.header("Upload your own documents")
+    st.caption(
+        "Add PDF, .txt, .eml, or .docx files to the corpus. They go through the same "
+        "parse → chunk → classify → embed → store pipeline as the sample docs."
+    )
+    uploaded_files = st.file_uploader(
+        "Choose files",
+        type=[ext.lstrip(".") for ext in config.SUPPORTED_EXTENSIONS],
+        accept_multiple_files=True,
+    )
+    if uploaded_files and st.button("Ingest uploaded files", type="primary"):
+        tmp_dir = tempfile.mkdtemp(prefix="rag_upload_")
+        try:
+            results = []
+            with st.spinner(f"Ingesting {len(uploaded_files)} file(s)..."):
+                for uploaded in uploaded_files:
+                    dest_path = os.path.join(tmp_dir, uploaded.name)
+                    with open(dest_path, "wb") as f:
+                        f.write(uploaded.getbuffer())
+                    results.append(ingest_file(dest_path))
+                get_index().refresh()
+        finally:
+            shutil.rmtree(tmp_dir, ignore_errors=True)
+
+        for r in results:
+            if r.status == "ok":
+                st.success(f"{r.filename}: indexed as '{r.category}' ({r.num_chunks} chunk(s))")
+            else:
+                st.error(f"{r.filename}: {r.status} — {r.error}")
+        st.rerun()
 
 question = st.text_input(
     "Ask a question about the document corpus",
